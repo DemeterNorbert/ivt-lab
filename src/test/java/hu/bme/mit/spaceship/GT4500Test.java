@@ -242,4 +242,23 @@ public class GT4500Test {
     verify(ts2, times(1)).fire(1);
   }
 
+  @Test
+  public void fireTorpedo_All_Second_And_First_Failed(){
+    // Arrange
+    when(ts1.isEmpty()).thenReturn(false);
+    when(ts1.fire(1)).thenReturn(false);
+    when(ts2.isEmpty()).thenReturn(false);
+    when(ts2.fire(1)).thenReturn(false);
+    // Act
+    boolean result = ship.fireTorpedo(FiringMode.ALL);
+
+    // Assert
+    assertEquals(false, result);
+    verify(ts1, times(1)).isEmpty();
+    verify(ts1, times(1)).fire(1);
+    verify(ts2, times(1)).isEmpty();
+    verify(ts2, times(1)).fire(1);
+  }
+
+  //Nincsen 100%-os lefedettség, mert a switchnek default ága nincs és érték sincs több az enumban.
 }
