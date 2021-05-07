@@ -1,0 +1,6 @@
+-Nézzük meg, hogy tényleg az elsőből lő ki.
+-Nézzük meg, hogy az első után a másodikból lő-e ki
+-Nézzük meg, hogy a második után az elsőből lő-e ki
+-Nézzük meg, hogy ha üres amiből éppen lőne, akkor a másikat megprobálja-e.
+-Nézzük meg, hogy ha üres akkor megpróbál-e vele lönni.
+-Nézzük meg, hogy ha az aktuális hibát dob lövés közben, akkor a másik lő-e
